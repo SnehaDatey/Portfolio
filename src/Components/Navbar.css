@@ -1,0 +1,62 @@
+.HeaderClass{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:1rem;
+    /*background-color:rgb(32, 178, 170);*/ /* this is header background color */ 
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    z-index: 10;
+}
+.HeaderClass-bg{
+    background-color: rgba(32, 178, 170, 1); /* if we scroll page then this color of header will be chnage */
+    transition: 0.5s;
+}
+.Nav-menu{
+    display: flex;
+}
+.Nav-menu li{
+   padding: 0 1rem; 
+}
+.Nav-menu li a{
+    font-size: 1.2rem; 
+    font-weight: 500;
+ }
+
+ .humburger{
+    display: none;
+ }
+
+ @media screen and (max-width:1040px) {
+    .Nav-menu{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100vh;
+      background: rgba(240, 248, 255, 0.9);
+      position: absolute;
+      top:0;
+      left: -100%;
+      z-index: -3;
+      transition: 0.3s;
+  
+    }
+  
+    .Nav-menu.active{
+      left: 0;
+    }
+    .Nav-menu li a{
+      font-size: 2rem; 
+      color:lightseagreen ; 
+   }
+  
+   .humburger{
+    display: initial;
+    cursor: pointer;
+  }
+  
+  
+    
+  }
